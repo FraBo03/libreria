@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Aggiungi scroll verticale se necessario */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px); /* Sfocatura dell'immagine di sfondo */
+    z-index: -1; /* Porta il background dietro al contenuto */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Porta il contenuto sopra al background */
+    padding: 20px; /* Spaziatura per il contenuto */
+    color: white; /* Colore del testo, modificabile secondo il tuo tema */
+}
