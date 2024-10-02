@@ -48,7 +48,7 @@ class UserEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return $this->user->exists ? 'Edit User' : 'Create User';
+        return $this->user->exists ? 'Editttttttt User' : 'Create User';
     }
 
     /**
@@ -77,8 +77,7 @@ class UserEditScreen extends Screen
             Button::make(__('Impersonate user'))
                 ->icon('bg.box-arrow-in-right')
                 ->confirm(__('You can revert to your original state by logging out.'))
-                ->method('loginAs')
-                ->canSee($this->user->exists && $this->user->id !== \request()->user()->id),
+                ->method('loginAs'),
 
             Button::make(__('Remove'))
                 ->icon('bs.trash3')
@@ -193,11 +192,16 @@ class UserEditScreen extends Screen
         return redirect()->route('platform.systems.users');
     }
 
-    /**
-     * @return \Illuminate\Http\RedirectResponse
-     */
+
     public function loginAs(User $user)
     {
+        if ($user->roles->contains('id', 1)) {
+            if (auth()->user()->roles->doesntContain('id', 1)) {
+                Toast::error(__('You do not have permission to impersonate an admin user.'));
+                return redirect()->route(config('platform.index'));
+            }
+        }
+
         Impersonation::loginAs($user);
 
         Toast::info(__('You are now impersonating this user'));
