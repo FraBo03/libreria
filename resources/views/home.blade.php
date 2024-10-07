@@ -6,6 +6,8 @@
 
         <title>Libreria</title>
 
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
         <style>
             .hidden { display: none;}
             .top-right { position: absolute; top: 10px; right: 10px;}
@@ -14,6 +16,7 @@
     </head>
     <body>
         @include('header')
+        <div class="background"></div>
         <center>
             <a href="{{ route('books.index') }}" style="color: #4CAF50;">Books</a>
             <a href="{{ route('loans.index') }}" style="color: #4CAF50;">Loans</a>
