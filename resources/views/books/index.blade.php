@@ -44,7 +44,7 @@
             <div class="book-container">
                 @foreach ($books as $book)
                 <div class="book-item">
-                    <a href="{{ route('books.show', $book->id) }}"><h3>{{ $book->title }}</h3></a>
+                    <a href="{{ route('books.show', $book->id) }}" style="color: white;"><h3>{{ $book->title }}</h3></a>
                     <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Image">
                     <div class="actions">
                         <a href="{{ route('books.edit', $book->id) }}">Edit</a>
@@ -72,7 +72,7 @@
             <div class="book-container">
                 @foreach ($books as $book)
                 <div class="book-item">
-                    <a href="{{ route('books.show', $book->id) }}"><h3>{{ $book->title }}</h3></a>
+                    <a href="{{ route('books.show', $book->id) }}" style="color: white;"><h3>{{ $book->title }}</h3></a>
                     <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Image">
                 </div>
                 @endforeach
@@ -94,7 +94,7 @@
             <div class="book-container">
                 @foreach ($books as $book)
                 <div class="book-item">
-                    <a href="{{ route('books.show', $book->id) }}"><h3>{{ $book->title }}</h3></a>
+                    <a href="{{ route('books.show', $book->id) }}" style="color: white;"><h3>{{ $book->title }}</h3></a>
                     <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Image">
                 </div>
                 @endforeach

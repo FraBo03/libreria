@@ -42,7 +42,7 @@
                         <td>{{ $loan->due_at ?? 'N/A' }}</td>
                         <td>{{ $loan->returned_at ?? 'Not returned yet' }}</td>
                         <td>
-                            <a href="{{ route('loans.edit', $loan->id) }}">Edit</a>
+                            <a href="{{ route('loans.edit', $loan->id) }}" style="color: black;">Edit</a>
                         </td>
                         
                     </tr>

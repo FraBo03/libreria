@@ -13,10 +13,10 @@
         </style>
     </head>
     <body>
+        @include('header')
         <center>
-            <a href="{{ route('home') }}"><h1>Libreria Bonavita</h1></a>
-            <a href="{{ route('books.index') }}">Books</a>
-            <a href="{{ route('loans.index') }}">Loans</a>
+            <a href="{{ route('books.index') }}" style="color: #4CAF50;">Books</a>
+            <a href="{{ route('loans.index') }}" style="color: #4CAF50;">Loans</a>
         </center>
 
         <div class="top-right">

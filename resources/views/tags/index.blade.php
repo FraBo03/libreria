@@ -20,7 +20,7 @@
                     @method('DELETE')
                     <button type="submit" style="display: inline-block;">Delete</button>
                 </form>
-                <a href="{{ route('tags.edit', $tag->id) }}">Edit</a>
+                <a href="{{ route('tags.edit', $tag->id) }}" style="color: white;">Edit</a>
             </li>
             @endforeach
         </ol>

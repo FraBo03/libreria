@@ -59,6 +59,6 @@
             </div>
         </form>
     
-        <a href="{{ route('loans.index') }}">Back to Loans</a>
+        <a href="{{ route('loans.index') }}" style="color: black;">Back to Loans</a>
     </body>
 </html>
