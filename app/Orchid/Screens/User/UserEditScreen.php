@@ -48,7 +48,7 @@ class UserEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return $this->user->exists ? 'Editttttttt User' : 'Create User';
+        return $this->user->exists ? 'Edit User' : 'Create User';
     }
 
     /**
